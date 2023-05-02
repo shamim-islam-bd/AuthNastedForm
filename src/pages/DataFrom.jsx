@@ -33,7 +33,7 @@ export default function DataFrom({ user }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4001/getdata")
+      .get("https://authnastedformapi.onrender.com/getdata")
       .then((response) => {
         setOptions(response.data);
       })
@@ -45,7 +45,7 @@ export default function DataFrom({ user }) {
   // getting formdata from server
   useEffect(() => {
     axios
-      .get("http://localhost:4001/getformdata")
+      .get("https://authnastedformapi.onrender.com/getformdata")
       .then((response) => {
         setFormData(response.data);
         response?.data?.map((data) => {
@@ -75,7 +75,7 @@ export default function DataFrom({ user }) {
       return setCheckboxError("Checkbox is required");
     }
     axios
-      .put(`http://localhost:4001/postdata`, data)
+      .put(`https://authnastedformapi.onrender.com/postdata`, data)
       .then((response) => {
         // empty error fields
         setNameError("");

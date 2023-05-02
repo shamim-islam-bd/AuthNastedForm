@@ -7,7 +7,7 @@ const SampleTable = ({ user }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4001/getformdata")
+      .get("https://authnastedformapi.onrender.com/getformdata")
       .then((response) => {
         setData(response.data);
       })

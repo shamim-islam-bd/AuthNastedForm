@@ -24,7 +24,10 @@ function Login() {
     }
 
     try {
-      const res = await axios.post("http://localhost:4001/login", data);
+      const res = await axios.post(
+        "https://authnastedformapi.onrender.com/login",
+        data
+      );
       console.log(res);
       setSuccess("User registered successfully.");
       localStorage.setItem("user", JSON.stringify(res.data.user));

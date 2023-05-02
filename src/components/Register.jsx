@@ -30,7 +30,10 @@ function Register() {
     }
 
     try {
-      const res = await axios.post("http://localhost:4001/register", data);
+      const res = await axios.post(
+        "https://authnastedformapi.onrender.com/register",
+        data
+      );
       console.log(res);
       setSuccess("User registered successfully.");
       localStorage.setItem("user", JSON.stringify(res.data.user));
